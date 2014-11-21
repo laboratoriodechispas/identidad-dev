@@ -19,10 +19,10 @@
 define('DB_NAME', 'laborato_identidad-dev');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'laborato_identid');
+define('DB_USER', 'laborato_spark');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', 'ia*abel1serch8');
+define('DB_PASSWORD', 'Spark#2014!');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', 'localhost');
