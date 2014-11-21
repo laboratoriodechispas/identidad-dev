@@ -1,5 +1,4 @@
-ruta = "http://laboratoriodechispas.mx/identidadatleta/v1/";  
-
+var ruta = "http://"+document.domain+"/identidadatleta/v1/";
 
 var nodos=new Array();
 var cont=0;
@@ -127,6 +126,7 @@ function DelRow()
 	   });   
 	}
 	function paginacion(valor,pagina){
+
 	   var jqxhr = $.post(ruta+"wp-admin/admin-ajax.php","action=caja_busca_evento&accion=buscaEventos&busqueda="+valor+"&paginacion="+pagina,   	   
 	   function(data){ 		
 		          $("#frmBusqueda").html(data);	

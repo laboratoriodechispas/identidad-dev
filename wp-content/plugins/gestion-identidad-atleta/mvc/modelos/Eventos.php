@@ -382,10 +382,13 @@
 		{
 			$query= "SELECT * FROM tbl_eventos WHERE nombre_evento LIKE '%$buscar%' ORDER BY  'id' limit $inicio,$TAMANO_PAGINA";
 
+	    }elseif($inicio){
+            $inicio *= 10;
+			$query= "SELECT * FROM tbl_eventos WHERE status=1 $whereconsulta limit $inicio,$TAMANO_PAGINA";
+            
 	    }else{
-			$query= "SELECT * FROM tbl_eventos WHERE status=1 $whereconsulta ORDER BY  'id' limit $inicio,$TAMANO_PAGINA";
-
-	    } //if(buscar)		
+            $query= "SELECT * FROM tbl_eventos WHERE status=1 $whereconsulta limit $inicio,$TAMANO_PAGINA";
+        } //if(buscar)
 		return $query;
 	}
 	

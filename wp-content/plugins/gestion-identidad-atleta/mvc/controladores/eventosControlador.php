@@ -212,7 +212,8 @@ if($total>=1&&$modulus >= 1){ $total++; echo "<strong>Pagina: </strong>"; }
 }
 
 /*Adaptacion para busqueda*/
-function buscaEventos(){		
+function buscaEventos(){
+print_r($_POST);
 global $TAMANO_PAGINA;
 //fill llena dos parametros texto para el GUI y un hidden para operacion
 //fill(nombre,id,txtnombre,txthidden,listaaesconder);
@@ -236,13 +237,17 @@ global $TAMANO_PAGINA;
   busqueda de empresas,solicita id user actual para activar permisos.
   regresa un array de items
   */  
-  if(isset($_POST["busqueda"])){ $buscar = $_POST["busqueda"]; }  
-  if(isset($_POST["paginacion"])){ $inicio = $_POST["paginacion"]; }   //indicador de cursor   
-  if(isset($_POST["orden"])){ $orden = $_POST["orden"]; }else{ $orden = "";} 
+  if(isset($_POST["busqueda"])){ $buscar = $_POST["busqueda"]; }
+
+  if(isset($_POST["paginacion"])){ $inicio = $_POST["paginacion"]; }   //indicador de cursor
+
+  if(isset($_POST["orden"])){ $orden = $_POST["orden"]; }else{ $orden = "desc";}
+
   if(!isset($inicio)){ $inicio = 0; }
   if(!isset($iduser)){ $iduser = ""; }
   $tamanopagina = $TAMANO_PAGINA;
-  $whereconsulta = " ORDER BY nombre_evento $orden";  
+
+  $whereconsulta = " ORDER BY nombre_evento $orden";
   $items = busquedaEventos($iduser,$buscar,$inicio,$tamanopagina,$whereconsulta);
   $contador=0; //para el id de jquery
 

@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
 
-    ruta = "http://laboratoriodechispas.mx/identidadatleta/v1/";  
+    var ruta = "http://"+document.domain+"/identidadatleta/v1/";
 
     $("#btnGuardarPreguntas").click(function () {
         guardar_preguntas_javascript();
