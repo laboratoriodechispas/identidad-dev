@@ -370,6 +370,7 @@
 
 	public function busquedaEventos($iduser,$buscar,$inicio,$TAMANO_PAGINA,$whereconsulta)
 	{
+
 		if($TAMANO_PAGINA==0)
 		{
 			//todos
@@ -385,7 +386,7 @@
 	    }elseif($inicio){
             $inicio *= 10;
 			$query= "SELECT * FROM tbl_eventos WHERE status=1 $whereconsulta limit $inicio,$TAMANO_PAGINA";
-            
+
 	    }else{
             $query= "SELECT * FROM tbl_eventos WHERE status=1 $whereconsulta limit $inicio,$TAMANO_PAGINA";
         } //if(buscar)

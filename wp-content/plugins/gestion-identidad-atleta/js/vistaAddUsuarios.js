@@ -1,4 +1,4 @@
-ruta = "http://laboratoriodechispas.mx/identidadatleta/v1/";  
+ruta =document.location.origin+"/identidadatleta/v1/";
 
 
 var nodos=new Array();

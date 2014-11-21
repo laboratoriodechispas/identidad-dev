@@ -2,11 +2,11 @@
 /*
  *Controlador para la gestión de los eventos  de identidad atleta 
 */
-   
+
 require($_SERVER['DOCUMENT_ROOT'].'/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/mvc/modelos/Eventos.php'); // se define el modelo que se usara de manera general
 require($_SERVER['DOCUMENT_ROOT'].'/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/mvc/envia/envia.php');
 global $mvc;
-$mvc =  $_SERVER['DOCUMENT_ROOT'] . "/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/mvc/";  
+$mvc =  $_SERVER['DOCUMENT_ROOT'] . "/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/mvc/";
 //ruta de la carpeta MVC
 function vista_eventos()
 {
@@ -213,7 +213,6 @@ if($total>=1&&$modulus >= 1){ $total++; echo "<strong>Pagina: </strong>"; }
 
 /*Adaptacion para busqueda*/
 function buscaEventos(){
-print_r($_POST);
 global $TAMANO_PAGINA;
 //fill llena dos parametros texto para el GUI y un hidden para operacion
 //fill(nombre,id,txtnombre,txthidden,listaaesconder);
@@ -276,16 +275,14 @@ global $TAMANO_PAGINA;
         <?php 
   }
 ?>
-<!-- paginacion -->
-<tr>   
-<td colspan="7">
-<?php 
- 		//$items = busquedaClientes($iduser,$buscar,0,0,$whereconsulta);
-        //paginacion("",$items,$TAMANO_PAGINA);
-?>
-</td>
-</tr>
-<!-- paginacion -->
+   <!-- paginacion -->
+   <tr>
+       <td colspan="7" class="pie-tabla"><?php
+           $items = busquedaEventos($idusersicisa,$buscar,0,0,$whereconsulta);
+           paginacion("",$items,$TAMANO_PAGINA);
+           ?></td>
+   </tr>
+   <!-- paginacion --><!-- paginacion -->
 </td>
 </table>
  </div>

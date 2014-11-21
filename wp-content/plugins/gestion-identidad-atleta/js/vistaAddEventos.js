@@ -1,4 +1,4 @@
-var ruta = "http://"+document.domain+"/identidadatleta/v1/";
+var ruta = document.location.origin+"/identidadatleta/v1/";
 
 var nodos=new Array();
 var cont=0;

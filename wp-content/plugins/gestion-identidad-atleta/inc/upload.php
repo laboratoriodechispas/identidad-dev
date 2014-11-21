@@ -1,6 +1,6 @@
 <?php
 
-$carpeta=$_SERVER['DOCUMENT_ROOT']."/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/images/uploads/imgDestacada";
+$carpeta=get_site_url()."/wp-content/plugins/gestion-identidad-atleta/images/uploads/imgDestacada";
 //$upload_folder ='images';
 $upload_folder=$carpeta;
 

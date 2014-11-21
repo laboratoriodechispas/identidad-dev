@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
 
-    var ruta = "http://"+document.domain+"/identidadatleta/v1/";
+    var ruta = document.location.origin+"/identidadatleta/v1/";
 
     $("#btnGuardarPreguntas").click(function () {
         guardar_preguntas_javascript();
