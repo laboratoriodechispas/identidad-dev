@@ -57,11 +57,11 @@ $answers = (empty($_GET['answers'])) ? '' : $_GET['answers'];
   <?php 
       
       if(!empty($questions)){
-          include($_SERVER['DOCUMENT_ROOT'] . "demos/identidad/wp-content/plugins/gestion-identidad-atleta/inc/questions.php");
+          include($_SERVER['DOCUMENT_ROOT'] . "identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/inc/questions.php");
       }	
 	  
 	  if(!empty($answers)){
-		  include($_SERVER['DOCUMENT_ROOT'] . "demos/identidad/wp-content/plugins/gestion-identidad-atleta/inc/answers.php");
+		  include($_SERVER['DOCUMENT_ROOT'] . "identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/inc/answers.php");
 	  }
   ?>
   
@@ -127,8 +127,8 @@ $answers = (empty($_GET['answers'])) ? '' : $_GET['answers'];
         <!-- paginacion -->
         <tr>
           <td colspan="7" class="pie-tabla"><?php 
-        //$items = busquedaEventos($idusersicisa,$buscar,0,0,$whereconsulta);
-        //paginacion("",$items,$TAMANO_PAGINA);
+        $items = busquedaEventos($idusersicisa,$buscar,0,0,$whereconsulta);
+       paginacion("",$items,$TAMANO_PAGINA);
         ?></td>
         </tr>
         <!-- paginacion -->

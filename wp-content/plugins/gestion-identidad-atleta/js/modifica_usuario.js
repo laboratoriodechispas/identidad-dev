@@ -1,6 +1,6 @@
 $(document).ready(function(){	
 
-  ruta = "http://laboratoriodechispas.mx/demos/identidad/";  
+  ruta = "http://laboratoriodechispas.mx/identidadatleta/v1/";  
   
   
 	 $("#modificar_perfil").click(function(){

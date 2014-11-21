@@ -208,7 +208,7 @@ $(function() {
 		 function actualizaThumbnailAjax(id,ruta){
 		   
 			document.getElementById('botonThumbnail').style.visibility='hidden'; // hide
-			 $('#imgThumbSrc').attr('src', "http://www.laboratoriodechispas.mx/demos/identidad/wp-content/plugins/gestion-identidad-atleta/images/loading-img.gif");
+			 $('#imgThumbSrc').attr('src', "http://www.laboratoriodechispas.mx/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/images/loading-img.gif");
 			
 			var inputFileImage = document.getElementById(id);
 			

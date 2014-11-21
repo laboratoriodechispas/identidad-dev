@@ -3,10 +3,10 @@
  *Controlador para la gestión de los eventos  de identidad atleta 
 */
    
-require($_SERVER['DOCUMENT_ROOT'].'/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/modelos/Eventos.php'); // se define el modelo que se usara de manera general
-require($_SERVER['DOCUMENT_ROOT'].'/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/envia/envia.php');
+require($_SERVER['DOCUMENT_ROOT'].'/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/mvc/modelos/Eventos.php'); // se define el modelo que se usara de manera general
+require($_SERVER['DOCUMENT_ROOT'].'/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/mvc/envia/envia.php');
 global $mvc;
-$mvc =  $_SERVER['DOCUMENT_ROOT'] . "/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/";  
+$mvc =  $_SERVER['DOCUMENT_ROOT'] . "/identidadatleta/v1/wp-content/plugins/gestion-identidad-atleta/mvc/";  
 //ruta de la carpeta MVC
 function vista_eventos()
 {
@@ -200,8 +200,10 @@ if($pos==0){
 
 $tamano = sizeof($items);
 $total = $tamano / $TAMANO_PAGINA;
-if($total<=0) $total=1;
-if($total>=1){ echo "<strong>Paginación: </strong>"; }
+    $modulus = $tamano%$TAMANO_PAGINA;
+
+if($total<=0 && $modulus >= 1) $total=2;
+if($total>=1&&$modulus >= 1){ $total++; echo "<strong>Pagina: </strong>"; }
 	for($i=0;$i<=$total-1;$i++){	  
 	  echo "<a href='#' onclick=paginacion('".$buscar."','".$i."')>";
 	  echo  $i+1;
