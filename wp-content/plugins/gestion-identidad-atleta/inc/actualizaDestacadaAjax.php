@@ -7,8 +7,8 @@
 *
 */
 ini_set("display_errors", 1);   
-$carpeta=$_SERVER['DOCUMENT_ROOT']."/demos/identidad/wp-content/plugins/gestion-identidad-atleta/images/uploads/imgDestacada/";
-$archivadorUrl = "http://www.laboratoriodechispas.mx/demos/identidad/wp-content/plugins/gestion-identidad-atleta/images/uploads/imgDestacada/";
+$carpeta=$_SERVER['DOCUMENT_ROOT']."/v1/wp-content/plugins/gestion-identidad-atleta/images/uploads/imgDestacada/";
+$archivadorUrl = $_SERVER['DOCUMENT_ROOT']."/v1/wp-content/plugins/gestion-identidad-atleta/images/uploads/imgDestacada/";
 $upload_folder=$carpeta;
 $nombre_archivo_anterior = $_REQUEST["OldNombreImagenDestacada"];  
 $nombre_archivo = $_FILES['archivo']['name'];

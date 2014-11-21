@@ -2,11 +2,11 @@
 /*
  *Controlador para la gestión de los eventos  de identidad atleta 
 */
-   
-require($_SERVER['DOCUMENT_ROOT'].'/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/modelos/Eventos.php'); // se define el modelo que se usara de manera general
-require($_SERVER['DOCUMENT_ROOT'].'/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/envia/envia.php');
+
+require($_SERVER['DOCUMENT_ROOT'].'/v1/wp-content/plugins/gestion-identidad-atleta/mvc/modelos/Eventos.php'); // se define el modelo que se usara de manera general
+require($_SERVER['DOCUMENT_ROOT'].'/v1/wp-content/plugins/gestion-identidad-atleta/mvc/envia/envia.php');
 global $mvc;
-$mvc =  $_SERVER['DOCUMENT_ROOT'] . "/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/";  
+$mvc =  $_SERVER['DOCUMENT_ROOT']."/v1/wp-content/plugins/gestion-identidad-atleta/mvc/";
 //ruta de la carpeta MVC
 function vista_eventos()
 {

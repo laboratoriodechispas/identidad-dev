@@ -57,11 +57,11 @@ $answers = (empty($_GET['answers'])) ? '' : $_GET['answers'];
   <?php 
       
       if(!empty($questions)){
-          include($_SERVER['DOCUMENT_ROOT'] . "demos/identidad/wp-content/plugins/gestion-identidad-atleta/inc/questions.php");
+          include($_SERVER['DOCUMENT_ROOT'] . "v1/wp-content/plugins/gestion-identidad-atleta/inc/questions.php");
       }	
 	  
 	  if(!empty($answers)){
-		  include($_SERVER['DOCUMENT_ROOT'] . "demos/identidad/wp-content/plugins/gestion-identidad-atleta/inc/answers.php");
+		  include($_SERVER['DOCUMENT_ROOT'] . "v1/wp-content/plugins/gestion-identidad-atleta/inc/answers.php");
 	  }
   ?>
   

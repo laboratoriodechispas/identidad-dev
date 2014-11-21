@@ -1,7 +1,8 @@
 <?php
 
 /*
-
+ * Clase evento insert y update en tabla equipos
+ *
  * Modelo que crea los objetos de equipos, en este archivo solo se puede dar de alta (insert) y modificar (update) la tabla de equipos (tbl_equipos) 
 
  */

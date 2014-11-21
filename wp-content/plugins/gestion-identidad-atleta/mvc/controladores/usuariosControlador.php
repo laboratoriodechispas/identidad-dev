@@ -2,9 +2,9 @@
 /*
  *Controlador para la gestión de los eventos  de identidad atleta 
 */
-require($_SERVER['DOCUMENT_ROOT'].'/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/modelos/Usuarios.php'); // se define el modelo que se usara de manera general
+require($_SERVER['DOCUMENT_ROOT'].'/v1/wp-content/plugins/gestion-identidad-atleta/mvc/modelos/Usuarios.php'); // se define el modelo que se usara de manera general
 global $mvc;
-$mvc =  $_SERVER['DOCUMENT_ROOT'] . "/demos/identidad/wp-content/plugins/gestion-identidad-atleta/mvc/";
+$mvc =  $_SERVER['DOCUMENT_ROOT'] . "/v1/wp-content/plugins/gestion-identidad-atleta/mvc/";
 //ruta de la carpeta MVC
 function perfil_usuario()
 {  
